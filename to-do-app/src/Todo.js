@@ -43,7 +43,7 @@ function Todo(props) {
             <div className={classes.paper}>
       <p>previous Value :{props.todo.todo}</p>
       <input value={input} placeholder={props.todo.todo} onChange={e=> setInput(e.target.value)}/>
-      <Button onClick={updateTodo}>Update</Button>
+      <Button disabled={!input} onClick={updateTodo}>Update</Button>
       </div>
         </Modal> 
         <List className="todo_list" >
